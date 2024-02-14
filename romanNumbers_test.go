@@ -8,6 +8,7 @@ func TestConvertToRomanNumber(t *testing.T) {
 		romanNumber  string
 	}{
 		{1, "I"},
+		{2, "II"},
 	}
 
 	for _, tt := range numbersToTest {
