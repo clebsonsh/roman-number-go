@@ -2,6 +2,7 @@ package main
 
 func ConvertToRomanNumber(arabicNumber int) string {
 	arabicToRoman := map[int]string{
+		5: "V",
 		4: "IV",
 		1: "I",
 	}
