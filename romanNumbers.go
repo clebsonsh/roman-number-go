@@ -1,10 +1,18 @@
 package main
 
 func ConvertToRomanNumber(arabicNumber int) string {
+	arabicToRoman := map[int]string{
+		4: "IV",
+		1: "I",
+	}
+
 	result := ""
 
-	for range arabicNumber {
-		result += "I"
+	for arabic, roman := range arabicToRoman {
+		for arabicNumber >= arabic {
+			result += roman
+			arabicNumber -= arabic
+		}
 	}
 
 	return result
