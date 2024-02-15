@@ -47,13 +47,38 @@ func TestConvertToRomanNumber(t *testing.T) {
 		assertConvertToRomanNumber(t, tt.arabicNumber, tt.romanNumber)
 	}
 
+	t.Run("test with 0", func(t *testing.T) {
+		_, err := ConvertToRomanNumber(0)
+
+		assertError(t, err)
+	})
+
+	t.Run("test with negative number", func(t *testing.T) {
+		_, err := ConvertToRomanNumber(0)
+
+		assertError(t, err)
+	})
+
+	t.Run("test with number greater than 3999", func(t *testing.T) {
+		_, err := ConvertToRomanNumber(0)
+
+		assertError(t, err)
+	})
+
 }
 
 func assertConvertToRomanNumber(t *testing.T, arabicNumber int, want string) {
 	t.Helper()
-	got := ConvertToRomanNumber(arabicNumber)
+	got, _ := ConvertToRomanNumber(arabicNumber)
 
 	if got != want {
 		t.Errorf("got %q want %q", got, want)
+	}
+}
+
+func assertError(t *testing.T, err error) {
+	t.Helper()
+	if err == nil {
+		t.Errorf("expected an error but didn't get one")
 	}
 }
