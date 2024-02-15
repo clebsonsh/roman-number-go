@@ -5,6 +5,10 @@ func ConvertToRomanNumber(arabicNumber int) string {
 		arabic int
 		roman  string
 	}{
+		{100, "C"},
+		{90, "XC"},
+		{50, "L"},
+		{40, "XL"},
 		{10, "X"},
 		{9, "IX"},
 		{5, "V"},
