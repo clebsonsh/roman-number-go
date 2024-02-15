@@ -1,6 +1,12 @@
 package main
 
-func ConvertToRomanNumber(arabicNumber int) string {
+import "errors"
+
+func ConvertToRomanNumber(arabicNumber int) (string, error) {
+	if arabicNumber <= 0 || arabicNumber > 3999 {
+		return "", errors.New("arabic number must be between 1 and 3999")
+	}
+
 	arabicToRoman := []struct {
 		arabic int
 		roman  string
@@ -29,5 +35,5 @@ func ConvertToRomanNumber(arabicNumber int) string {
 		}
 	}
 
-	return result
+	return result, nil
 }
