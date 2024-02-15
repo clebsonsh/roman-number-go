@@ -37,6 +37,10 @@ func TestConvertToRomanNumber(t *testing.T) {
 		{500, "D"},
 		{600, "DC"},
 		{900, "CM"},
+		{1000, "M"},
+		{2000, "MM"},
+		{3000, "MMM"},
+		{3999, "MMMCMXCIX"},
 	}
 
 	for _, tt := range numbersToTest {
