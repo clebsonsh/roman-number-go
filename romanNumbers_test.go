@@ -17,6 +17,21 @@ func TestConvertToRomanNumber(t *testing.T) {
 		{8, "VIII"},
 		{9, "IX"},
 		{10, "X"},
+		{11, "XI"},
+		{14, "XIV"},
+		{15, "XV"},
+		{16, "XVI"},
+		{19, "XIX"},
+		{20, "XX"},
+		{30, "XXX"},
+		{40, "XL"},
+		{50, "L"},
+		{60, "LX"},
+		{70, "LXX"},
+		{80, "LXXX"},
+		{90, "XC"},
+		{100, "C"},
+		{200, "CC"},
 	}
 
 	for _, tt := range numbersToTest {
